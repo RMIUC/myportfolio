@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Jingyue Cheng</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Bitter|Signika" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+   </head>
+   <body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" style="margin-top:-4px;" href="index.html"><img width="28px" height="28px" src="./images/gi.png" alt="" /></a>
+               <p id="date"></p>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+                  <li><a href="portfolios.html">PORTFOLIO</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+      <div class="row">
+         <div class="row first">
+            <div id="mainPhoto2" class="medium-6 columns"></div>
+            <div class="medium-6 columns intro">
+               <h1 class="jello" >
+               Hello, I'm Jingyue</h3><br><br>
+               <p>I'm an Art major student in Cal State EastBay.
+               </p>
+               </br>
+            </div>
+         </div>
+         <div class="row second">
+            <ul id="movieposters">
+               <li class="medium-3 columns">
+                  <img src="images/ec-img-1.jpg" alt="Iron Man 2" />
+                  <div class="movieinfo">
+                     <h6>section 1</h6>
+                     <p>babaababa
+                     </p>
+                  </div>
+               </li>
+               <li class="medium-3 columns">
+                  <img src="images/chinese-coins-gold-ingots-red-packet-3978107.jpg" alt="The Last Airbender" />
+                  <div class="movieinfo">
+                     <h6>Section 2</h6>
+                     <p>brige
+                     </p>
+                  </div>
+               </li>
+               <li class="medium-3 columns">
+                  <img src="images/inside-pantip-plaza-shopping-mall-bangkok-27472221.jpg" alt="The Last Airbender" />
+                  <div class="movieinfo">
+                     <h6>Section 3</h6>
+                     <p>sunset
+                     </p>
+                  </div>
+               </li>
+               <li class="medium-3 columns">
+                  <img src="images/binary-code-1126628.jpg" alt="Tron Legacy" />
+                  <div class="movieinfo">
+                     <h6>Section 4</h6>
+                     <p>babaababababab
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <footer class="text-center">
+         <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+         <span class="glyphicon glyphicon-chevron-up"></span>
+         </a>
+         <p>welcome to Jingyue's website!</a>
+         </p>
+      </footer>
+      <script>
+         $(document).foundation();
+
+
+         today=new Date();
+         var dd=today.getDate();
+         var mm=today.getMonth()+1;
+         var yyyy=today.getFullYear();
+         if(dd<10){
+           dd='0'+dd;
+         }
+         if(mm<10){
+           mm='0'+mm;
+         }
+         var today=yyyy+'/'+mm+'/'+dd;
+         document.getElementById('date').innerHTML=today;
+
+         $(document).ready(function() {
+
+             $("a[href='#home']").on('click', function(event) {
+                 $('html, body').animate({
+                     scrollTop: 0
+                 }, 500);
+             });
+         })
+      </script>
+   </body>
+</html>

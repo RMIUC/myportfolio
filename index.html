@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Jingyue Cheng</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+      <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Bitter|Signika" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" style="margin-top:-4px;" href="index.html"><img width="28px" height="28px" src="./images/gi.png" alt="" /></a>
+               <p id="date"></p>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+                  <li><a href="portfolios.html">PORTFOLIO</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div style="margin-top:50px;" class="row">
+         <section class="cr-container">
+            <input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1" checked/>
+            <label for="select-img-1" class="cr-label-img-1">1</label>
+            <input id="select-img-2" name="radio-set-1" type="radio" class="cr-selector-img-2" />
+            <label for="select-img-2" class="cr-label-img-2">2</label>
+            <input id="select-img-3" name="radio-set-1" type="radio" class="cr-selector-img-3" />
+            <label for="select-img-3" class="cr-label-img-3">3</label>
+            <div class="clr"></div>
+            <div class="cr-bgimg">
+               <div>
+                  <span>Slice 1 - Image 1</span>
+                  <span>Slice 1 - Image 2</span>
+                  <span>Slice 1 - Image 3</span>
+               </div>
+               <div>
+                  <span>Slice 2 - Image 1</span>
+                  <span>Slice 2 - Image 2</span>
+                  <span>Slice 2 - Image 3</span>
+               </div>
+               <div>
+                  <span>Slice 3 - Image 1</span>
+                  <span>Slice 3 - Image 2</span>
+                  <span>Slice 3 - Image 3</span>
+               </div>
+            </div>
+            <div class="cr-titles">
+               <h3><span>Past</span><span>Rising in the East</span></h3>
+               <h3><span>Present</span><span>Learning and Practice to Perfectio</span></h3>
+               <h3><span>Future</span><span>Unforgettable eperiences</span></h3>
+            </div>
+         </section>
+      </div>
+      <div class="row">
+         <div class="row first">
+            <div id="mainPhoto" class="medium-6 columns"></div>
+            <div class="medium-6 columns intro">
+               <h1 class="jello" >
+               Hello, I'm Jingyue</h3><br><br>
+               <p>I'm a graphic designer.
+               </p>
+               </br>
+            </div>
+         </div>
+         <div class="row second">
+            <ul id="movieposters">
+               <li class="medium-3 columns">
+                  <img src="images/c.jpg" alt="Iron Man 2" />
+                  <div class="movieinfo">
+                     <h6>section 1</h6>
+                     <p>babaababa
+                     </p>
+                  </div>
+               </li>
+               <li class="medium-3 columns">
+                  <img src="images/d.jpg" alt="The Last Airbender" />
+                  <div class="movieinfo">
+                     <h6>Section 2</h6>
+                     <p>brige
+                     </p>
+                  </div>
+               </li>
+               <li class="medium-3 columns">
+                  <img src="images/e.jpg" alt="The Last Airbender" />
+                  <div class="movieinfo">
+                     <h6>Section 3</h6>
+                     <p>sunset
+                     </p>
+                  </div>
+               </li>
+               <li class="medium-3 columns">
+                  <img src="images/f.jpg" alt="Tron Legacy" />
+                  <div class="movieinfo">
+                     <h6>Section 4</h6>
+                     <p>babaababababab
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <footer class="text-center">
+         <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+         <span class="glyphicon glyphicon-chevron-up"></span>
+         </a>
+         <p>welcome to Jingyue's website!</a>
+         </p>
+      </footer>
+      <script>
+         $(document).foundation();
+
+
+         today=new Date();
+         var dd=today.getDate();
+         var mm=today.getMonth()+1;
+         var yyyy=today.getFullYear();
+         if(dd<10){
+           dd='0'+dd;
+         }
+         if(mm<10){
+           mm='0'+mm;
+         }
+         var today=yyyy+'/'+mm+'/'+dd;
+         if (mm=='04' && dd=='22' && yyyy=='2017'){
+           today+=' Happy Earth Day!'
+         }
+         if (mm=='05' && dd=='13' && yyyy=='2017'){
+           today+=' Today is WST, Good luck!'
+         }
+         if (mm=='05' && dd=='29' && yyyy=='2017'){
+           today+=' Happy Memorial Day!'
+         }
+         if (mm=='06' && dd=='14' && yyyy=='2017'){
+           today+=' Happy Flag Day!'
+         }
+         if (mm=='07' && dd=='04'){
+           today+=' Happy Independence Day!'
+         }
+         if (mm=='07' && dd=='12'){
+           today+=' Happy Birthday Day!'
+         }
+         document.getElementById('date').innerHTML=today;
+
+         $(document).ready(function() {
+
+             $("a[href='#home']").on('click', function(event) {
+                 $('html, body').animate({
+                     scrollTop: 0
+                 }, 500);
+             });
+         })
+      </script>
+   </body>
+</html>

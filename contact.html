@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Jingyue Cheng</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Bitter|Signika" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+   </head>
+   <body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" style="margin-top:-4px;" href="index.html"><img width="28px" height="28px" src="./images/gi.png" alt="" /></a>
+               <p id="date"></p>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+                  <li><a href="portfolios.html">PORTFOLIO</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <section id="contact">
+         <div class="section-content">
+            <h1 class="section-header">Contact Me</span></h1>
+            <h3><span class="glyphicon glyphicon-map-marker"></span>San Francisco Bay Area, US</h3>
+            <h3><span class="glyphicon glyphicon-phone"></span>Phone: 415-316-2637</h3>
+            <h3><span class="glyphicon glyphicon-envelope"></span>Email: 79148999@qq.com</h3>
+         </div>
+         <div class="contact-section">
+         <div class="container">
+            <form action="https://docs.google.com/a/horizon.csueastbay.edu/forms/d/e/1FAIpQLSe3bF3V_GBGtCIBZI-jA8s4lG6wn0FtV2bdDy-AACnE8ibocA/formResponse" method="post">
+               <div class="col-md-6 form-line">
+                  <div class="form-group">
+                     <label for="name">Your name</label>
+                     <input type="text" name="entry.541904466" class="form-control" id="name" placeholder=" Enter Name">
+                  </div>
+                  <div class="form-group">
+                     <label for="mail Address">Email Address</label>
+                     <input type="email" name="entry.1081468596" class="form-control" id="mail Address" placeholder=" Enter Email id">
+                  </div>
+                  <div class="form-group">
+                     <label for="subject">Subject</label>
+                     <input type="text" name="entry.1182838365" class="form-control" id="subject" placeholder=" Enter your subject.">
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for ="description"> Message</label>
+                     <textarea  name="entry.802843384" class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+                  </div>
+                  <div>
+                     <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section>
+      <div class="row mapgroup">
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIfNfG573fIh6qyYEBIAQNtHvwvtshelo&callback=initMap" async defer></script>
+         <script>
+            function initMap() {
+                // Create a map object and specify the DOM element for display.
+                var map1 = new google.maps.Map(document.getElementById('map1'), {
+                    center: {
+                        lat: 45.75,
+                        lng: 126.63
+                    },
+                    scrollwheel: false,
+                    zoom: 10
+                });
+
+                var map2 = new google.maps.Map(document.getElementById('map2'), {
+                    center: {
+                        lat: 37.6582681,
+                        lng: -122.06003559999999
+                    },
+                    scrollwheel: false,
+                    zoom: 8
+                });
+            }
+         </script>
+         <div id="map1" class="map medium-6 columns"></div>
+         <div id="map2" class="map medium-6 columns"></div>
+      </div>
+      <footer class="foot text-center">
+         <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+         <span class="glyphicon glyphicon-chevron-up"></span>
+         </a>
+         <p>welcome to Jingyue's website!</a>
+         </p>
+      </footer>
+      <script>
+         $(document).foundation();
+
+         today=new Date();
+         var dd=today.getDate();
+         var mm=today.getMonth()+1;
+         var yyyy=today.getFullYear();
+         if(dd<10){
+           dd='0'+dd;
+         }
+         if(mm<10){
+           mm='0'+mm;
+         }
+         var today=yyyy+'/'+mm+'/'+dd;
+         document.getElementById('date').innerHTML=today;
+
+         $(document).ready(function() {
+
+             $("a[href='#home']").on('click', function(event) {
+                 $('html, body').animate({
+                     scrollTop: 0
+                 }, 500);
+             });
+         })
+      </script>
+   </body>
+</html>
